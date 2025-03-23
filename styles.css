@@ -134,8 +134,8 @@ section p {
 
 /* 商品画像のスタイル */
 .product img {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     object-fit: cover; /* 画像を正方形にトリミング */
     border-radius: 10px; /* 画像の角を丸く */
     transition: transform 0.3s ease-in-out;
