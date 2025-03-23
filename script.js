@@ -96,3 +96,11 @@ backToTopBtn.addEventListener("click", function() {
         behavior: "smooth"
     });
 });
+
+// メニューボタンをクリックしたときにメニューを表示/非表示にする
+const menuToggle = document.getElementById('menu-toggle');
+const menu = document.getElementById('menu');
+
+menuToggle.addEventListener('click', function() {
+    menu.classList.toggle('show');  // 'show' クラスの追加/削除でメニューを表示/非表示にする
+});
