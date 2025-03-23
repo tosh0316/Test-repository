@@ -124,13 +124,61 @@ section p {
     margin-bottom: 40px;
 }
 
-/* 商品一覧 */
-.products {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
+/* 商品セクションのスタイル */
+#products {
+    padding: 20px;
+    text-align: center;
 }
+
+/* 商品コンテナのスタイル */
+.product-container {
+    display: flex;
+    flex-wrap: wrap; /* 商品を複数行に配置できるようにする */
+    justify-content: space-around; /* 商品を均等に配置 */
+    gap: 20px; /* 商品間のスペース */
+}
+
+/* 各商品のスタイル */
+.product {
+    width: calc(33.333% - 20px); /* 画面幅に応じて1行に3商品を並べる */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* 商品画像のスタイル */
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* 画像の角を丸く */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* 画像にホバー効果 */
+.product img:hover {
+    transform: scale(1.05); /* ホバー時に画像が少し大きくなる */
+}
+
+/* 商品名のスタイル */
+.product p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .product {
+        width: calc(50% - 20px); /* 画面幅が小さい場合、2商品を1行に並べる */
+    }
+}
+
+@media (max-width: 480px) {
+    .product {
+        width: 100%; /* さらに画面が小さい場合、1商品を1行に */
+    }
+}
+
 
 .products img {
     width: 100%;
@@ -170,3 +218,4 @@ footer {
 footer p {
     font-size: 1rem;
 }
+
