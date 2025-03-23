@@ -71,21 +71,7 @@ nav {
     display: block;
 }
 
-/* レスポンシブ対応: 画面幅が768px以下の時にメニューが横並びになるようにする */
-@media (max-width: 768px) {
-    nav {
-        text-align: left;
-    }
-    .menu {
-        width: 100%;
-        background-color: #444;
-        padding-top: 10px;
-    }
-    .menu li {
-        width: 100%;
-        text-align: center;
-    }
-}
+
 
 nav a {
     color: #fff;
@@ -123,6 +109,7 @@ section p {
     line-height: 1.8;
     margin-bottom: 40px;
 }
+
 
 /* 商品セクションのスタイル */
 #products {
@@ -167,18 +154,20 @@ section p {
 }
 
 /* レスポンシブ対応 */
+
+/* 画面幅が768px以下の場合（タブレットやスマホ） */
 @media (max-width: 768px) {
     .product {
         width: calc(50% - 20px); /* 画面幅が小さい場合、2商品を1行に並べる */
     }
 }
 
+/* 画面幅が480px以下の場合（スマホ） */
 @media (max-width: 480px) {
     .product {
-        width: 100%; /* さらに画面が小さい場合、1商品を1行に */
+        width: calc(50% - 10px); /* さらに小さい画面では2列のまま */
     }
 }
-
 
 .products img {
     width: 100%;
