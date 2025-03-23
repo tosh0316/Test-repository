@@ -35,6 +35,58 @@ nav {
     padding: 15px 0;
 }
 
+/* メニューボタン */
+.menu-toggle {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+
+/* メニューリスト（初期状態では非表示） */
+.menu {
+    display: none; /* 初期状態で隠す */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.menu li {
+    margin: 15px 0;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+/* メニューが表示されたとき */
+.menu.show {
+    display: block;
+}
+
+/* レスポンシブ対応: 画面幅が768px以下の時にメニューが横並びになるようにする */
+@media (max-width: 768px) {
+    nav {
+        text-align: left;
+    }
+    .menu {
+        width: 100%;
+        background-color: #444;
+        padding-top: 10px;
+    }
+    .menu li {
+        width: 100%;
+        text-align: center;
+    }
+}
+
 nav a {
     color: #fff;
     text-decoration: none;
